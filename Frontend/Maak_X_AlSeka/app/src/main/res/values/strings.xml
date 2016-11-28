@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Maak_X_ElSeka</string>
+    <string name="login">Login</string>
+    <string name="passwordLen">"between 6 and 45 alphanumeric characters"</string>
+    <string name="nameError">Enter your name</string>
+
+    <string name="requestTitle">Request</string>
+    <string name="confirmTitle">Confirm</string>
+    <string name="profileTitle">Profile</string>
+    <string name="title_activity_from_to">Map</string>
+</resources>
