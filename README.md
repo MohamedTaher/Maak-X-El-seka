@@ -1,0 +1,1 @@
+This app is helping people to communicate to share same transportation (at this phase we assume the transportation is taxi only, we will update with another transportations)  for free, at next phase we will add premium account for drivers 
