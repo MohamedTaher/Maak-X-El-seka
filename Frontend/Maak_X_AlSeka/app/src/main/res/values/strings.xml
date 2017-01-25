@@ -8,4 +8,8 @@
     <string name="confirmTitle">Confirm</string>
     <string name="profileTitle">Profile</string>
     <string name="title_activity_from_to">Map</string>
+
+    <string name="noInternetConnection">No Internet Connection</string>
+    <string name="wrongEmailOrPassword">Incorrect email or password</string>
+    <string name="signupFail">Signup Fail</string>
 </resources>

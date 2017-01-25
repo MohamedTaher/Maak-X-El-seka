@@ -1,7 +1,15 @@
 package com.example.taher.maak_x_alseka.HTTPTasks;
 
+import android.content.Context;
 import android.os.AsyncTask;
+import android.support.design.widget.Snackbar;
 import android.util.Log;
+import android.widget.Toast;
+
+import com.example.taher.maak_x_alseka.Helper.Check;
+import com.example.taher.maak_x_alseka.R;
+import com.example.taher.maak_x_alseka.app.MyApplication;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,6 +34,12 @@ public class Task extends AsyncTask<String, Integer, String> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
+        Context mContext = MyApplication.getContext();
+        boolean online = Check.isOnline(mContext);
+
+        if (!online) {
+            this.cancel(true);
+        }
     }
 
     @Override

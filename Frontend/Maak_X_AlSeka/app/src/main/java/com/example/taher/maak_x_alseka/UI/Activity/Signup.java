@@ -1,6 +1,7 @@
 package com.example.taher.maak_x_alseka.UI.Activity;
 
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.widget.Toast;
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import com.example.taher.maak_x_alseka.HTTPTasks.Constants;
 import com.example.taher.maak_x_alseka.HTTPTasks.OnPostExecute;
 import com.example.taher.maak_x_alseka.HTTPTasks.Task;
+import com.example.taher.maak_x_alseka.Helper.Check;
 import com.example.taher.maak_x_alseka.R;
 
 import org.json.JSONException;
@@ -117,7 +119,17 @@ public class Signup extends AppCompatActivity {
     }
 
     public void onSignupFailed() {
-        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
+
+        String massage;
+
+        if (!Check.isOnline(this))
+            massage = getString(R.string.noInternetConnection);
+        else
+            massage = getString(R.string.signupFail);
+
+
+        Snackbar snackbar = Snackbar.make(getWindow().getCurrentFocus(), massage, Snackbar.LENGTH_LONG);
+        snackbar.show();
 
         _signupButton.setEnabled(true);
     }

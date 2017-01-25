@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#673AB7</color>
-    <color name="colorPrimaryDark">#512DA8</color>
+    <color name="colorPrimary">#59aec7</color>
+    <color name="colorPrimaryDark">#6fd0ed</color>
     <color name="colorAccent">#9E9E9E</color>
 
     <color name="lightColorPrimary">#D1C4E9</color>
@@ -20,7 +20,7 @@
     <color name="iron">#CCCCCC</color>
     <color name="white">#FFFFFF</color>
 
-    <color name="duskYellow">#ffd000</color>
+    <color name="duskYellow">#FFCC00</color>
     <color name="lightGrey">#d1d1d1</color>
 
 </resources>

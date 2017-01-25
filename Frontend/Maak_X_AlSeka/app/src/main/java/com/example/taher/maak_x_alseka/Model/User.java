@@ -1,6 +1,10 @@
 package com.example.taher.maak_x_alseka.Model;
 
+import android.util.Base64;
+
 import java.io.Serializable;
+import java.util.*;
+import java.io.*;
 
 /**
  * Created by taher on 25/11/16.
@@ -101,4 +105,6 @@ public class User implements Serializable {
     public void setUser_id(int user_id) {
         this.user_id = user_id;
     }
+
+
 }
