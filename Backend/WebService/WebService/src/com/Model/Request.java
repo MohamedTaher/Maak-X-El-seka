@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 import org.json.simple.JSONObject;
 
+import com.helper.SortRequests;
 import com.mysql.jdbc.Statement;
 
 public class Request {
@@ -78,6 +79,7 @@ public class Request {
 
 	public static ArrayList<Request> getRequests(String from_lat,
 			String from_lng, String to_lat, String to_lng) {
+		
 		try {
 			Connection conn = DBConnection.getActiveConnection();
 			String sql = "select * from request;";
@@ -107,7 +109,9 @@ public class Request {
 						|| request.user_id4 == 0)
 					res.add(request);
 			}
-
+			
+			java.util.Collections.sort(res, new SortRequests(from_lat, from_lng, to_lat, to_lng));
+			
 			return res;
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -257,4 +261,37 @@ public class Request {
 		return null;
 	}
 
+	public String getFrom_lat() {
+		return from_lat;
+	}
+
+	public void setFrom_lat(String from_lat) {
+		this.from_lat = from_lat;
+	}
+
+	public String getFrom_lng() {
+		return from_lng;
+	}
+
+	public void setFrom_lng(String from_lng) {
+		this.from_lng = from_lng;
+	}
+
+	public String getTo_lat() {
+		return to_lat;
+	}
+
+	public void setTo_lat(String to_lat) {
+		this.to_lat = to_lat;
+	}
+
+	public String getTo_lng() {
+		return to_lng;
+	}
+
+	public void setTo_lng(String to_lng) {
+		this.to_lng = to_lng;
+	}
+
+	
 }
